@@ -1,4 +1,4 @@
-# NodeJS Full Satck Frontend
+# NodeJS Full Stack Frontend
 
 ## To run project
 
