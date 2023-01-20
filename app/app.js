@@ -8,6 +8,8 @@ app.use(cors());
 
 // json request
 app.use(express.json());
+// urlencoded middleware
+app.use(express.urlencoded({ extended: true }));
 
 // middleware templating
 app.set('view engine', 'ejs');
