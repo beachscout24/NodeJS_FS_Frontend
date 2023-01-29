@@ -3,6 +3,7 @@ const cors = require('cors');
 const userRouter = require('../routes/userRouter');
 const bookRouter = require('../routes/bookRouter');
 const authorRouter = require('../routes/authorRouter');
+const session = require('express-session');
 
 const app = express();
 // cors middleware
@@ -29,8 +30,7 @@ app.use('/books', bookRouter);
 app.use('/authors', authorRouter);
 
 app.use((req, res) => {
-  req.session.destroy(null);
-  res.status(404).render('404');
+  res.status(404).render('404', { session: session });
 });
 
 module.exports = app;

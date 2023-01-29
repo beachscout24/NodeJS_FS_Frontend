@@ -7,6 +7,7 @@ const getBooks = async (req) => {
 };
 
 const postBook = async (req) => {
+  //console.log(req.headers.authorization);
   axios.defaults.headers.post['Authorization'] = req.headers.authorization;
   return await axios.post(process.env.url + 'books', {
     title: req.body.title,
@@ -31,7 +32,7 @@ const getBookById = async (req) => {
 const updateBookById = async (req) => {
   axios.defaults.headers.put['Authorization'] = req.headers.authorization;
   const body = req.body;
-  console.log();
+  //console.log();
   return axios.put(process.env.url + 'books/' + body.id, {
     title: body.title,
     author: body.author,

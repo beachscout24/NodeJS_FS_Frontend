@@ -95,7 +95,6 @@ const postRegisterHandler = async (req, res) => {
       );
     }
   } catch (e) {
-    console.log(e);
     return errorTemplate(
       req,
       res,

@@ -37,10 +37,10 @@
           <div class="col-md-10 col-lg-8 mx-auto text-left text-white">
             <h4>Books</h4>
             <% if(typeof(message) != 'undefined'){%>
-            <h4 style="color: green;"><%-message%></h4>
+            <h4 name="message" style="color: green;"><%-message%></h4>
             <%}%>
             <div class="nav-link">
-              <a href="/books/addBook" alt="Add a book" title="Add a book"
+              <a name="addBook" href="/books/addBook" alt="Add a book" title="Add a book"
                 >+ Add a book</a
               >
             </div
@@ -49,10 +49,10 @@
               <hr />
               <% if(typeof(data) != "undefined"){ data.map(book => {%>
               <span>
-                <a href="/books/editBook/<%-book._id%>">Edit this book</a>
+                <a name="editBook" href="/books/editBook/<%-book._id%>">Edit this book</a>
               </span>
               <span style="float:right">
-                <a href="/books/deleteBook/<%-book._id%>">Delete this book</a>
+                <a name="deleteBook" href="/books/deleteBook/<%-book._id%>">Delete this book</a>
               </span>
               <p>Title: <%-book.title%></p>
               <p>Author: <%-book.author%></p>

@@ -36,7 +36,7 @@
         <div class="row gx-4 gx-lg-5">
           <div class="col-md-10 col-lg-8 mx-auto text-left">
             <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-            <h2 class="text-white mb-5">Edit a book!</h2>
+            <h2 name="h2-title" class="text-white mb-5">Edit an author</h2>
 
             <form
               class="form-signup"
@@ -111,11 +111,10 @@
               <div class="space"></div>
               <div class="row input-group-newsletter">
                 <div class="col">
-                  <input class="form-control" id="about" type="text"
-                  name="about" placeholder="Enter about..." aria-label="Enter
-                  about..." <% if(typeof(data) !== "undefined" ) {%>
-                  value="<%-data.about%>" <%}%> /> <% if(typeof(errs) !=
-                  "undefined") {%>
+                  <input class="form-control" type="text" name="about"
+                  placeholder="Enter about..." aria-label="Enter about..." <%
+                  if(typeof(data) !== "undefined" ) {%> value="<%-data.about%>"
+                  <%}%> /> <% if(typeof(errs) != "undefined") {%>
                   <span style="color: red"><%-errs.aboutMsg%></span>
                   <% } %>
                 </div>
@@ -127,6 +126,7 @@
                     class="btn btn-primary"
                     id="submitButton"
                     type="submit"
+                    name="edit-author-btn"
                   >
                     Edit Author!
                   </button>

@@ -38,7 +38,9 @@
           <div class="text-center">
             <% if(typeof(session) != "undefined" && typeof(session.name) !=
             "undefined") {%>
-            <h4 style="color: green">Welcome <%-session.name%></h4>
+            <h4 name="message" style="color: green">
+              Welcome <%-session.name%>
+            </h4>
             <% } %>
             <h1 class="mx-auto my-0 text-uppercase">Cool Sites</h1>
             <h2 class="text-white-50 mx-auto mt-2 mb-5">

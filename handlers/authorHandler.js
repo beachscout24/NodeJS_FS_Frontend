@@ -90,7 +90,6 @@ const postAuthorHandler = async (req, res) => {
     req.headers.authorization = 'Bearer ' + session.token;
     const author = await postAuthor(req);
     const authors = await getAuthors(req);
-    console.log(authors.data.result);
     return successTemplate(
       res,
       'authors',
@@ -170,9 +169,7 @@ const deleteAuthorHandler = async (req, res) => {
     session = req.session;
     req.headers.authorization = 'Bearer ' + session.token;
     const result = await deleteAuthorById(req);
-    console.log(result.data);
     const authors = await getAuthors(req);
-    console.log(authors.data);
     return successTemplate(
       res,
       'authors',

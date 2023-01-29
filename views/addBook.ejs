@@ -36,7 +36,7 @@
         <div class="row gx-4 gx-lg-5">
           <div class="col-md-10 col-lg-8 mx-auto text-left">
             <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-            <h2 class="text-white mb-5">Add a book!</h2>
+            <h2 name="h2-title" class="text-white mb-5">Add a book</h2>
 
             <form
               class="form-signup"
@@ -45,7 +45,7 @@
               method="POST"
             >
               <% if(typeof(message) != 'undefined'){%>
-              <h4 style="color: green"><%-message%></h4>
+              <h4 name="message" style="color: green"><%-message%></h4>
               <%}%>
               <div class="row input-group-newsletter">
                 <div class="col">
@@ -124,6 +124,7 @@
                     class="btn btn-primary"
                     id="submitButton"
                     type="submit"
+                    name="addBook-btn"
                   >
                     Add Book!
                   </button>

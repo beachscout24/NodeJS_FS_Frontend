@@ -52,7 +52,7 @@
               action="/login"
             >
             <% if(typeof(message) != "undefined") {%>
-              <h4 style="color: green"><%-message%></h4>
+              <h4 name="message" style="color: green"><%-message%></h4>
               <% } %>
               <!-- Email address input-->
               <div class="row input-group-newsletter">
@@ -95,6 +95,7 @@
                     class="btn btn-primary"
                     id="submitButton"
                     type="submit"
+                    name="login-btn"
                   >
                     Login
                   </button>

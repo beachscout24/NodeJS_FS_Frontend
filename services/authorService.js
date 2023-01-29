@@ -24,7 +24,7 @@ const postAuthor = async (req) => {
 };
 
 const updateAuthorById = async (req) => {
-  console.log(req.body.id);
+  //console.log(req.body.id);
   axios.defaults.headers.patch[
     'Authorization'
   ] = `${req.headers.authorization}`;
@@ -39,7 +39,7 @@ const updateAuthorById = async (req) => {
 };
 
 const deleteAuthorById = async (req) => {
-  console.log(req.headers.authorization);
+  //console.log(req.headers.authorization);
   axios.defaults.headers.delete[
     'Authorization'
   ] = `${req.headers.authorization}`;
